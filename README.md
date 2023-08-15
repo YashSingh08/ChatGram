@@ -104,6 +104,7 @@ FIREBASE DEPLOY
   -> Login using your credentials of firebase
     -> firebase login
     -> firebase init (this will initiate the deployemeny, it will ask some points, choose them accordingly)
+    -> npm run build
     -> firebase deploy
   -> Your website will be deployed with a URL, in the case of my porject url is https://chatgram-ba3a9.web.app/
     
