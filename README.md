@@ -1,3 +1,113 @@
+TECH INFORMATION
+
+--> Tech used in this project
+    -> React
+    -> Firebase Firestore Realtime database (for database)
+    -> Material UI (for designing ui)
+    -> React Router (for routing different components using "/")
+    -> React Context API
+    -> Redux
+    -> Google Authentication
+    -> Deployment using FireBase
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SETTING UP PROCESS
+
+--> Create react app using command
+    -> npx create-react-app chatgram
+    -> it will create a folder named chatgram with all the react modules and components we need to intiate
+
+--> Setting up FireBase
+    -> Setting up firebase is essential to power the entire backend for this project, as we will use to power authentication, database, and when we deploy it all the hosting functionality is done using FireBase.
+
+    -> On the web browser go to firebase.google.com
+    -> Click on 'Go to console' button
+    -> Click on 'Create a project'
+    -> Follow the instructions on the screen -- this will create a project on FireBase
+    -> Click on setting button -- Project Setting -- then choose we app icon all the way bottom on the page
+    -> Register for the web application here by following the informations on the screen
+    -> Run all the commands in cmd to install firabase globally
+    -> After all steps we'll redirect to the Dashboard, here all the way down we can see three switches, out of them click on config
+    -> copy the configuration code from there and then make a new file in the chatgram/src named firebase.js and paste the code in it
+
+--> Get inside the chatgram folder in terminal
+    -> run the command 'npm start', development server of react js should be started now on localhost
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CLEAN UP PROCESS
+
+--> We gonna delete some files now
+    -> Delete App.test.js, logo.svg and setupTests.js
+    -> Now let's code in App.js
+    -> Clean up everything inside the App.css to get rid of css applied by default react app
+    -> Now get inside the index.css and update that
+    -> we are done with cleaning up the things
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LETS BUILD THE APP
+
+-> One thing to keep in mind while creating a new component that we should export that component as default and import the component in that component which will be using the created component
+
+-> Update App.js for the body of the react app, and App.css for styling that page
+-> Create files for sidebar which will contains sidebar
+    -> Sidebar.js and Sidebar.css
+
+-> Install the Material UI for some designing components and icons
+    -> run the command 'npm install @mui/material @emotion/react @emotion/styled'
+
+-> create files for all the chat rooms to be shown on sidebar
+    -> SidebarChat.js and SidebarChat.css
+
+-> create files for the right section where particular opened chat will be displayed
+    -> Chat.js and Chat.css
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SETTING UP FIRESTORE DATABASE IN FIREBASE
+
+-> Install firebase if not yet using terminal
+    -> get inside the project folder in the terminal
+    -> install firebase using command "npm i firebase"
+    -> create consts on the firebase.js so we can use some functionalities like databse, authentication, and google authentication
+    -> go to firbase.google.com again and click on Build at left sidebar then choose Firestore Database
+    -> Create database in test mode and follow the instructions, database will be created
+    -> Click on Start Collection to create a new Collection also create unique ID for the collection by clicking on the auto id button
+    -> Map all the names and id we have given in the database to the sidebar.js const, so it will render in realtime whenever user add a new room
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSTALLING REACT ROUTER
+
+--> React router is needed to render the chat into the chat screen
+    -> Whenever user click one of the chat from the sidebar then that chat will get render to the right section where they can chat and see messages
+    -> to install react router go to the terminal and get inside the project folder and use this command "npm i react-router-dom"
+    -> then we will create a Router containing the Switch, switch will redirect different route based on the path
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GOOGLE LOGIN
+
+--> For google login we introduce google authentication into the app also gonna be use react context API
+    -> Create Login.js componentin src folder
+    -> after code all up go to firebase again.
+    -> go to authentication and get started and set up sign in method with google, then choose enable and set the project support email and save
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FIREBASE DEPLOY
+
+--> Install firebase in the project folder using if not yet
+  == we have simple three steps to deploy the website
+  -> Login using your credentials of firebase
+    -> firebase login
+    -> firebase init (this will initiate the deployemeny, it will ask some points, choose them accordingly)
+    -> firebase deploy
+  -> Your website will be deployed with a URL, in the case of my porject url is https://chatgram-ba3a9.web.app/
+    
+
 # You can check the web app via this link
 https://chatgram-ba3a9.web.app/
 
